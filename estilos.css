@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* bg general  */
+html{
+    background-color: whitesmoke;
+}
+
+/* box header  */
+header
+h1 {
+    text-align: center;
+    color: white;
+    
+}
+.destacado {
+    color: white;
+    text-align: center;
+}
+.boxh1 {
+    width:1000px;
+    height:auto;
+    background-color: black;
+    margin: auto;
+    padding: 5px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-sizing: border-box;
+}
+
+/* Main */
+main{
+    width: 900px;
+    background-color: lightgray;
+    font-size: 1em;
+    margin: 0px auto;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+/* box h2s  */
+h2 {
+    color: white;
+    padding-left: 20px;   
+}
+.boxh2 {
+    width: 200px;
+    height:auto;
+    background-color: black;
+    padding:5px;
+    border-radius: 30px;
+    box-sizing: border-box;
+}
+
+/* Squares en experiencia  */
+ul {
+    list-style-type: square;
+}
+
+/* Habilidades */
+
+
+
+/* footer */
+footer {
+    text-align: center;
+}
+.Contacto {
+display: inline-block;
+margin-right: 20px;
+}
+.footerA{
+    display: block;
+    font-size: 16px;
+    font-style: bold;
+}
+.footerB {
+    display: block;
+    font-size: 14px;
+    color:dimgray
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    
+}
