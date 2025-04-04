@@ -1,97 +1,136 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>Curriculum Vitae Faba Alejandro</title>
-    <link href="estilos.css" rel="stylesheet" type="text/css">
-</head>
-<body>
+    <link href="estilos.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
     <header>
-        <div class="boxh1">
-            <h1>Faba Alejandro</h1>
-            <p class= "destacado"> Diseño gr&aacute;fico
-        </p>
-        </div>
+      <div class="boxh1">
+        <h1>Faba Alejandro</h1>
+        <p class="destacado">Diseño gr&aacute;fico</p>
+      </div>
     </header>
     <main>
-        <img src="img/Cara.jpg" alt="FotoCurriculum">
-        <section>
-            <div class="boxh2">
-            <h2>Experiencia</h2>
+      <!--         Ojo el alt, fotocurriculum es un poco genérico, podría ser "Foto de Alejandro"
+ -->
+      <img src="img/Cara.jpg" alt="FotoCurriculum" />
+      <section>
+        <div class="boxh2">
+          <h2>Experiencia</h2>
         </div>
         <!---->
-            <h3>Diseñador gr&aacute;fico / Manejo de impresoras digitales</h3>
-            <h4>Safe Color</h4>
-            <aside>Mayo a Septiembre 2024</aside>
-            <ul>
-            <li>Uso de impresoras digitales (remeras, stickers, displays) y m&aacute;quinas de corte. </li>
-            <li>Preparaci&oacute;n de entregas mayoristas y minoristas.</li>
-            <li>Atenci&oacute;n al cliente.</li>
-            </ul>
+        <h3>Diseñador gr&aacute;fico / Manejo de impresoras digitales</h3>
+        <h4>Safe Color</h4>
+        <!--   Semanticamente no es así como deberías usar así un aside, es para agrupar contenido que va a ir a un costado 
+            o que tiene una importancia menor al main, pero no debería haber adentro una sola oración, si lo que querés 
+            es que esa oración esté alineada a la derecha después lo manejamos con css, pero ponela dentro de otra tag, 
+            puede ser simplemente un p o un span -->
+        <aside>Mayo a Septiembre 2024</aside>
+        <ul>
+          <li>
+            Uso de impresoras digitales (remeras, stickers, displays) y
+            m&aacute;quinas de corte.
+          </li>
+          <li>Preparaci&oacute;n de entregas mayoristas y minoristas.</li>
+          <li>Atenci&oacute;n al cliente.</li>
+        </ul>
         <!---->
-            <h3>Atenci&oacute;n al cliente / Gestor express</h3>
-            <h4>BBVA Banco Franc&eacute;s</h4>
-            <aside>Noviembre 2021 a mayo 2022</aside>
-            <ul>
-            <li>Orientaci&oacute;n a los clientes dentro de cada sector del banco.</li>
-            <li>Asesoramiento sobre gesti&oacute;n de claves banelco y usuarios homebanking.</li>
-            <li>Ayuda en realizaci&oacute;n de dep&oacute;sitos, pagos de tarjetas y entrega/visualizaci&oacute;n de
-                res&uacute;menes de gastos de tarjeta.</li>
-            </ul>
-        </section>
-        <Section>
-            <div class="boxh2">
-                <h2>Estudios</h2>    
-            </div>
-            <h3>Licenciatura en Diseño y Comunicación Visual</h3>
-            <h4>UNLA Univ. Nacional de Lanús</h4>
-            <aside>Febrero 2020 a la actualidad</aside>
-            
-            <h3>Curso de cocina Diet y Cel&iacute;aca</h3>
-            <h4>Instituto Gastron&oacute;mico de las Am&eacute;ricas</h4>
-            <aside>Julio 2019 a octubre 2019</aside>
-            
-            <h3>Bachiller en Ciencias sociales</h3>
-            <h4>Instituto Secundario Canbazyan</h4>
-            <aside>Marzo 2013 a diciembre 2018</aside>
-        </Section>
-        <section>
-            <div class="boxh2">
-            <h2>Idiomas</h2>
+        <h3>Atenci&oacute;n al cliente / Gestor express</h3>
+        <h4>BBVA Banco Franc&eacute;s</h4>
+        <!--             misma corrección respecto al aside de más arriba
+ -->
+        <aside>Noviembre 2021 a mayo 2022</aside>
+        <ul>
+          <li>
+            Orientaci&oacute;n a los clientes dentro de cada sector del banco.
+          </li>
+          <li>
+            Asesoramiento sobre gesti&oacute;n de claves banelco y usuarios
+            homebanking.
+          </li>
+          <li>
+            Ayuda en realizaci&oacute;n de dep&oacute;sitos, pagos de tarjetas y
+            entrega/visualizaci&oacute;n de res&uacute;menes de gastos de
+            tarjeta.
+          </li>
+        </ul>
+      </section>
+      <section>
+        <div class="boxh2">
+          <h2>Estudios</h2>
         </div>
-            <h3>Ingl&eacute;s</h3>
-            <p>Intermedio</p>
-        </section>
-        <section>
-            <div class="boxh2">
-            <h2>Habilidades</h2></div>
-            <img src="img/ilustrator.jpg" alt="logoilus">
-            <span>Adobe ilustrator</span> <br>
-            <img src="img/indesign.jpg" alt="logoindesign">
-            <span>Adobe indesign</span> <br>
-            <img src="img/photoshop.jpg" alt="logophoto">
-            <span>Adobe photoshop</span> <br>
-        </section>
+        <h3>Licenciatura en Diseño y Comunicación Visual</h3>
+        <h4>UNLA Univ. Nacional de Lanús</h4>
+        <aside>Febrero 2020 a la actualidad</aside>
+
+        <h3>Curso de cocina Diet y Cel&iacute;aca</h3>
+        <h4>Instituto Gastron&oacute;mico de las Am&eacute;ricas</h4>
+        <aside>Julio 2019 a octubre 2019</aside>
+
+        <h3>Bachiller en Ciencias sociales</h3>
+        <h4>Instituto Secundario Canbazyan</h4>
+        <aside>Marzo 2013 a diciembre 2018</aside>
+      </section>
+      <section>
+        <div class="boxh2">
+          <h2>Idiomas</h2>
+        </div>
+        <h3>Ingl&eacute;s</h3>
+        <p>Intermedio</p>
+      </section>
+      <section>
+        <div class="boxh2">
+          <h2>Habilidades</h2>
+        </div>
+        <!--         Esto estaría bueno que esté dentro de una lista, te ejemplifico como
+             <ul>
+          <li>
+            <img src="img/ilustrator.jpg" alt="logoilus" />
+            <span>Adobe ilustrator</span>
+          </li>
+          y así..
+        </ul>
+        (después podemos quitar los bullets y hacer que quede lindo con css)
+ -->
+
+        <img src="img/ilustrator.jpg" alt="logoilus" />
+        <span>Adobe ilustrator</span>
+        <img src="img/indesign.jpg" alt="logoindesign" />
+        <span>Adobe indesign</span>
+        <img src="img/photoshop.jpg" alt="logophoto" />
+        <span>Adobe photoshop</span>
+      </section>
     </main>
     <footer>
-     <h3>Contacto</h3>
-     <div class="Contacto">
-         <span class="footerA">Email</span>
-        <span class="footerB"><a href="mailto:alefaba7@gmail.com?Subject=Hola" target="_top">alefaba7@gmail.com</span>
-     </div>
-     <div class="Contacto">
-         <span class="footerA">Celular</span>
-         <span class="footerB">1134040021</span>
-     </div>
-     <div class="Contacto">
-          <span class="footerA">Direccion</span>
-          <span class="footerB">Calle Falsa 123</span>
-     </div>
+      <h3>Contacto</h3>
+      <!--       otro lugar que te vendría bien usar lista
+ -->
       <div class="Contacto">
-         <span class="footerA">Linkedin</span>
-         <span class="footerB"><a href="http://www.linkedin.com/in/owinfrey/" target="_blank">Oprah Winfrey</a></span>
-     </div>
-        
-     </footer>
-</body>
+        <span class="footerA">Email</span>
+        <span class="footerB"
+          ><a href="mailto:alefaba7@gmail.com?Subject=Hola" target="_top"
+            >alefaba7@gmail.com</a
+          ></span
+        >
+      </div>
+      <div class="Contacto">
+        <span class="footerA">Celular</span>
+        <span class="footerB">1134040021</span>
+      </div>
+      <div class="Contacto">
+        <span class="footerA">Direccion</span>
+        <span class="footerB">Calle Falsa 123</span>
+      </div>
+      <div class="Contacto">
+        <span class="footerA">Linkedin</span>
+        <span class="footerB"
+          ><a href="http://www.linkedin.com/in/owinfrey/" target="_blank"
+            >Oprah Winfrey</a
+          ></span
+        >
+      </div>
+    </footer>
+  </body>
 </html>
