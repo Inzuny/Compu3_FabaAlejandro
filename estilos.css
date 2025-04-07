@@ -35,7 +35,8 @@ main{
     font-size: 1em;
     margin: 0px auto;
     padding: 20px;
-    border-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
 }
 
 /* box h2s  */
@@ -58,8 +59,21 @@ ul {
 }
 
 /* Habilidades */
+.HabilidadesLista {
+    list-style-type: none;
+}
 
-
+.abc {
+    align-items: center;
+    display: inline-block;
+    width: auto;
+    height:auto;
+    background-color: whitesmoke;
+    padding:20px;
+    border-radius: 30px;
+    margin: 30px;
+    text-align: center;
+}
 
 /* footer */
 footer {
@@ -82,6 +96,5 @@ margin-right: 20px;
 
 a {
     text-decoration: none;
-    color: black;
-    
+    color: black; 
 }
