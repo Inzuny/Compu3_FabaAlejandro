@@ -9,18 +9,19 @@
 
 <body>
     <header>
-        <div class="boxh1">
+        <div class="boxh1"> <!-- este estilo podría aplicarse directamente a <header> -->
             <h1>Faba Alejandro</h1>
             <p class="destacado"> Diseño gr&aacute;fico</p>
         </div>
     </header>
     <main>
-        <img src="img/Cara.jpg" alt="Foto de Perfil" />
-        <section>
-            <div class="boxh2">
+        <img src="img/Cara.jpg" alt="Foto de Perfil" /> <!-- los textos alternativos de las imágenes deberían ser más descriptivos para accesibilidad -->
+        <!-- yo colocaría la imagen dentro de un contenedor como <section> para que no quede "suelta" dentro de <main> o sin contexto, a consultar -->
+        <section> <!-- podés organizar mejor el contenido dentro de los <section>, agrupando la información relacionada en etiquetas <article>. por ejemplo: dentro de "Experiencia" podrías usar un <article> para cada trabajo -->
+            <div class="boxh2"> <!-- este <div> para el titulo tranquilamente se puede omitir y podés aplicar los estilos directamente a <h2> usando ese class -->
                 <h2>Experiencia</h2>
             </div>
-            <!---->
+            <!----> <!-- esto se usa para hacer comentarios, podrías usar saltos de linea vacío (dar enter) si querés organizar tu código -->
             <h3>Diseñador gr&aacute;fico / Manejo de impresoras digitales</h3>
             <h4>Safe Color</h4>
             <p>Mayo a septiembre 2024</p>
@@ -69,7 +70,7 @@
             <p>Marzo 2013 a diciembre 2018</p>
         </section>
         <section>
-            <div class="boxh2">
+            <div class="boxh2"> <!-- acá lo mismo que Experiencia, podés aplicar los estilos directo en la etiqueta -->
                 <h2>Idiomas</h2>
             </div>
             <h3>Ingl&eacute;s</h3>
@@ -96,11 +97,11 @@
         </section>
     </main>
     <footer>
-        <h3>Contacto</h3>
+        <h3>Contacto</h3> <!-- te recomiendo convertir la información del <footer> en una lista, con CSS podés eliminar el bullet (el puntito negro) y que la lista se vea horizontal y no vertical -->
         <div class="Contacto">
-            <span class="footerA">Email</span>
+            <span class="footerA">Email</span> <!-- evitemos el uso de <span>, hay mejores etiquetas que podrías usar como <p> o <h4> -->
             <span class="footerB">
-                <a href="mailto:alefaba7@gmail.com?Subject=Hola" target="_top">alefaba7@gmail.com</a></span>
+                <a href="mailto:alefaba7@gmail.com?Subject=Hola" target="_top">alefaba7@gmail.com</a></span> <!-- si usás la etiqueta <a> de enlace, no necesitás colocarlo dentro de un <spam> -->
         </div>
         <div class="Contacto">
             <span class="footerA">Celular</span>
