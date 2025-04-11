@@ -8,12 +8,44 @@ html {
 
 
 body {
-    background-color: #151915;
+    background-color: #152015;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
     padding: 1em;
 }
+/* Flexbox de navigation items */
+
+.navigationflexbox {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    list-style: none;
+    background-color: #6808A4;
+    border-radius: 1em;
+    margin: 1em 0;
+    padding: .5em 0;
+}
+/* Llegue hasta aca haciendo hoy, lo subo para la asistencia. Seguro para el lunes ya resuelvo eso raro que me hace el hover. Buen finde! */
+.navigationitems {
+    background-color: #152015;
+    border-radius: 2em;
+    padding: 1em 3em;
+    margin: 0;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+}
+.navigationitems a:hover {
+    background-color: #E4A93C;
+    color:#000;
+    border-radius: 2em;
+    padding: 1em 3em;
+    margin: 0;
+    font-weight: 700;
+}
+
 
 /* Row del Header */
 .headerbox {
@@ -42,6 +74,8 @@ body {
     height: 250px;
 }
 
+/* Fuentes */
+
 .titulo {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 700;
@@ -56,17 +90,18 @@ body {
     margin: 0;
 }
 
+/* tamaño de fuente */
 .headerfont1 {
-    font-size: 40px;
+    font-size: 2.25em;
 }
 
 .headerfont2 {
-    font-size: 36px;
+    font-size: 2em;
 
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 2em;
     font-family: "IBM Plex Mono", monospace;
     font-weight: 700;
     font-style: normal;
@@ -82,7 +117,7 @@ ul {
     font-weight: 400;
     font-style: normal;
     margin: 1em 0 0 0;
-    font-size: 24px;
+    font-size: 1.25em;
 }
 
 
@@ -151,8 +186,16 @@ ul {
     border-radius: 1em;
     display: flex;
     flex-flow: column wrap;
-    background-color: aliceblue;
-    color: black;
+    background-color:#ffff;
+    color: #000000;
+}
+
+.box-habilidades {
+    display: flex;
+    flex-flow: column wrap;
+    height: 30em;
+    gap: 1em;
+
 }
 
 .row1 {
@@ -164,7 +207,10 @@ ul {
     display: flex;
     align-items: start;
     justify-content: start;
+
+
 }
+
 
 .row2 {
     flex-direction: column;
@@ -174,16 +220,18 @@ ul {
     background-color: #6808A4;
     padding: 1em;
     gap: 1em;
-    color: white
+    color: #ffff;
 }
 
 .row1 p {
-    margin: 0;
+    margin: 1.5em 0 0 0;
+    font-weight: 700;
+
 }
 
 a {
     text-decoration: none;
-    color: white;
+    color:#ffff;
 }
 
 .logo {
