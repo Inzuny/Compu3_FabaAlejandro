@@ -1,100 +1,196 @@
 @charset "utf-8";
+
 /* CSS Document */
-
-/* bg general  */
-html{
-    background-color: whitesmoke;
+html {
+    color: #ffff;
+    margin: 0 3em 0 3em;
 }
 
-/* box header  */
-header
-h1 {
-    text-align: center;
-    color: white;
-    
-}
-.destacado {
-    color: white;
-    text-align: center;
-}
-.boxh1 {
-    width:1000px;
-    height:auto;
-    background-color: black;
-    margin: auto;
-    padding: 5px;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-    box-sizing: border-box;
+
+body {
+    background-color: #151915;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    padding: 1em;
 }
 
-/* Main */
-main{
-    width: 900px;
-    background-color: lightgray;
-    font-size: 1em;
-    margin: 0px auto;
-    padding: 20px;
-    border-bottom-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-
-/* box h2s  */
-h2 {
-    color: white;
-    padding-left: 20px;   
-}
-.boxh2 {
-    width: 200px;
-    height:auto;
-    background-color: black;
-    padding:5px;
-    border-radius: 30px;
-    box-sizing: border-box;
-}
-
-/* Squares en experiencia  */
-ul {
-    list-style-type: square;
-}
-
-/* Habilidades */
-.HabilidadesLista {
-    list-style-type: none;
-}
-
-.abc {
+/* Row del Header */
+.headerbox {
+    background-color: #6808A4;
+    border-radius: 1em;
+    padding: 2em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
     align-items: center;
-    display: inline-block;
-    width: auto;
-    height:auto;
-    background-color: whitesmoke;
-    padding:20px;
-    border-radius: 30px;
-    margin: 30px;
-    text-align: center;
+    color: #ffff;
+    gap: 3em;
 }
 
-/* footer */
-footer {
-    text-align: center;
+.headertext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1em;
 }
-.Contacto {
-display: inline-block;
-margin-right: 20px;
+
+.hfoto {
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
 }
-.footerA{
-    display: block;
-    font-size: 16px;
-    font-style: bold;
+
+.titulo {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
 }
-.footerB {
-    display: block;
-    font-size: 14px;
-    color:dimgray
+
+.bajada {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+}
+
+.headerfont1 {
+    font-size: 40px;
+}
+
+.headerfont2 {
+    font-size: 36px;
+
+}
+
+h2 {
+    font-size: 36px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+p,
+h3,
+h4,
+ul {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    font-style: normal;
+    margin: 1em 0 0 0;
+    font-size: 24px;
+}
+
+
+.main-container {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.boxes-arriba {
+    display: flex;
+    gap: 1em;
+}
+
+.box-col {
+    flex: 1;
+    border-radius: 1em;
+
+}
+
+.col1 {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1em;
+    flex: 1;
+}
+
+.arriba {
+    flex: 1;
+    padding: 1em;
+}
+
+.abajo {
+    flex: 1;
+    background-color: #3A24AF;
+    border-radius: 1em;
+    padding: 1em;
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+.col2 {
+    padding: 1em;
+    flex: 1;
+    background-color: #6808A4;
+    border-radius: 1em;
+}
+
+.col3 {
+    flex: 1;
+}
+
+
+.boxes-abajo {
+    display: flex;
+    gap: 1em;
+}
+
+.box-row {
+    flex: 1;
+    padding: 1em;
+    border-radius: 1em;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: aliceblue;
+    color: black;
+}
+
+.row1 {
+    flex-grow: 3;
+    padding: 1em;
+    margin: 1em;
+    gap: 1em;
+    flex-flow: row;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+
+.row2 {
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    flex: 0;
+    background-color: #6808A4;
+    padding: 1em;
+    gap: 1em;
+    color: white
+}
+
+.row1 p {
+    margin: 0;
 }
 
 a {
     text-decoration: none;
-    color: black; 
+    color: white;
+}
+
+.logo {
+    object-fit: contain;
+
+}
+
+.footer {
+    font-size: 16px;
 }
