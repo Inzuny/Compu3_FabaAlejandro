@@ -3,7 +3,7 @@
 /* CSS Document */
 html {
     color: #ffff;
-    margin: 0 3em 0 3em;
+    margin: 0 3em;
 }
 
 
@@ -26,16 +26,21 @@ body {
     margin: 1em 0;
     padding: .5em 0;
 }
-/* Llegue hasta aca haciendo hoy, lo subo para la asistencia. Seguro para el lunes ya resuelvo eso raro que me hace el hover. Buen finde! */
+
 .navigationitems {
-    background-color: #152015;
-    border-radius: 2em;
     padding: 1em 3em;
     margin: 0;
     font-family: "IBM Plex Mono", monospace;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     text-transform: uppercase;
+}
+
+.navigationitems a{
+    background-color: #152015;
+    border-radius: 2em;
+    padding: 1em 3em;
+
 }
 .navigationitems a:hover {
     background-color: #E4A93C;
