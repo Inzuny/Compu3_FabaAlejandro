@@ -3,7 +3,7 @@
 /* CSS Document */
 html {
     color: #ffff;
-    margin: 0 3em;
+    margin: 0 5em;
 }
 
 
@@ -14,6 +14,34 @@ body {
     justify-content: space-around;
     padding: 1em;
 }
+
+/* Row del Header */
+.headerbox {
+    background-color: #6808A4;
+    border-radius: 1em;
+    padding: 2em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    color: #ffff;
+    gap: 3em;
+}
+
+.headertext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 1em;
+}
+
+.hfoto {
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+}
+
 /* Flexbox de navigation items */
 
 .navigationflexbox {
@@ -49,34 +77,6 @@ body {
     padding: 1em 3em;
     margin: 0;
     font-weight: 700;
-}
-
-
-/* Row del Header */
-.headerbox {
-    background-color: #6808A4;
-    border-radius: 1em;
-    padding: 2em;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    color: #ffff;
-    gap: 3em;
-}
-
-.headertext {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-    gap: 1em;
-}
-
-.hfoto {
-    border-radius: 100%;
-    width: 250px;
-    height: 250px;
 }
 
 /* Fuentes */
@@ -116,13 +116,21 @@ h2 {
 
 p,
 h3,
-h4,
-ul {
+ul,
+li {
     font-family: "Anonymous Pro", monospace;
     font-weight: 400;
     font-style: normal;
     margin: 1em 0 0 0;
     font-size: 1.25em;
+}
+
+h4 {
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    font-style: normal;
+    margin: 1em 0 0 0;
+    font-size: 1.10em;
 }
 
 
@@ -144,6 +152,18 @@ ul {
 
 }
 
+.box-col p {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    margin: 1em 0 0 0;
+    font-size: 1em;
+    text-transform: uppercase;
+
+}
+
+
+
 .col1 {
     display: flex;
     flex-flow: column wrap;
@@ -154,8 +174,26 @@ ul {
 .arriba {
     flex: 1;
     padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 3px 0 rgba(255, 255, 255, 0.2);
+}
+.arriba2 {
+    margin-top: 1em;
+    flex: 1;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 3px 0 rgba(255, 255, 255, 0.2);
 }
 
+
+.arriba p {
+    text-transform: none;
+    font-family: "Anonymous Pro", monospace;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 1em;
+    font-size: 1.25em;
+}
 .abajo {
     flex: 1;
     background-color: #3A24AF;
@@ -167,6 +205,9 @@ ul {
     list-style-type: none;
     padding-inline-start: 0;
 }
+
+
+
 
 .col2 {
     padding: 1em;
@@ -231,6 +272,15 @@ ul {
 .row1 p {
     margin: 1.5em 0 0 0;
     font-weight: 700;
+}
+
+.row2 p {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+    margin: 1em 0 0 0;
+    font-size: 1em;
+    text-transform: uppercase;
 
 }
 
@@ -247,3 +297,4 @@ a {
 .footer {
     font-size: 16px;
 }
+
