@@ -1,34 +1,35 @@
 @charset "utf-8";
 
 /* CSS Document */
+/* Row del Header */
 html {
     color: #ffff;
     margin: 0 5em;
 }
 
-
 body {
     background-color: #152015;
     display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    padding: 1em;
+    flex-direction: column;
 }
 
-/* Row del Header */
-.headerbox {
+/* Caja del header */
+header {
     background-color: #6808A4;
     border-radius: 1em;
     padding: 2em;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center;
     color: #ffff;
-    gap: 3em;
+    gap: 2em; 
 }
 
-.headertext {
+header img {
+    border-radius: 100%;
+}
+
+header section {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,80 +37,26 @@ body {
     gap: 1em;
 }
 
-.hfoto {
-    border-radius: 100%;
-    width: 250px;
-    height: 250px;
-}
-
-/* Flexbox de navigation items */
-
-.navigationflexbox {
-    display: flex;
-    flex-direction:row;
-    justify-content: space-around;
-    list-style: none;
-    background-color: #6808A4;
-    border-radius: 1em;
-    margin: 1em 0;
-    padding: .5em 0;
-}
-
-.navigationitems {
-    padding: 1em 3em;
-    margin: 0;
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 300;
-    font-style: normal;
-    text-transform: uppercase;
-}
-
-.navigationitems a{
-    background-color: #152015;
-    border-radius: 2em;
-    padding: 1em 3em;
-
-}
-.navigationitems a:hover {
-    background-color: #E4A93C;
-    color:#000;
-    border-radius: 2em;
-    padding: 1em 3em;
-    margin: 0;
-    font-weight: 700;
-}
-
 /* Fuentes */
-
-.titulo {
-    font-family: "IBM Plex Mono", monospace;
-    font-weight: 700;
-    font-style: normal;
+header h1{
+    font-size: 2.25em;
     margin: 0;
 }
-
-.bajada {
-    font-family: "Anonymous Pro", monospace;
-    font-weight: 400;
-    font-style: normal;
+header p{
+    font-size: 2em;
+    margin: 0;
+}
+h1 {
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
     margin: 0;
 }
 
 /* tamaño de fuente */
-.headerfont1 {
-    font-size: 2.25em;
-}
-
-.headerfont2 {
-    font-size: 2em;
-
-}
-
 h2 {
     font-size: 2em;
     font-family: "IBM Plex Mono", monospace;
     font-weight: 700;
-    font-style: normal;
     margin: 0;
     text-transform: uppercase;
 }
@@ -120,53 +67,86 @@ ul,
 li {
     font-family: "Anonymous Pro", monospace;
     font-weight: 400;
-    font-style: normal;
     margin: 1em 0 0 0;
     font-size: 1.25em;
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+a{
+    text-decoration: none;
+    color:#ffff;
 }
 
 h4 {
     font-family: "Anonymous Pro", monospace;
     font-weight: 400;
-    font-style: normal;
     margin: 1em 0 0 0;
     font-size: 1.10em;
 }
+/* Caja de los items del nav */
 
+nav ol{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style: none;
+    background-color: #6808A4;
+    border-radius: 1em;
+    box-sizing: border-box;
+    padding: .5em;
+    gap: 1em;
+}
 
-.main-container {
-    margin-top: 1em;
+nav li{
+    margin: 0;
+    padding: 1em;
+    align-items: center;
+    gap: 1em;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+nav a{
+    background-color: #152015;
+    border-radius: 1em;
+    padding: 1em 2em;
+}
+nav a:hover {
+    background-color: #E4A93C;
+    color:#000;
+    border-radius: 1em;
+    padding: 1em 2em;
+    font-weight: 700;
+}
+
+/* Boxes de contenido */
+
+.main-container{
     display: flex;
     flex-direction: column;
     gap: 1em;
 }
-
+/* Columns */
 .boxes-arriba {
     display: flex;
     gap: 1em;
 }
 
 .box-col {
+    display: flex;
+    flex-flow: column wrap;
     flex: 1;
     border-radius: 1em;
-
+    gap:1em;
 }
 
 .box-col p {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
-    font-style: normal;
-    margin: 1em 0 0 0;
     font-size: 1em;
     text-transform: uppercase;
-
-}
-
-.col1 {
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1em;
-    flex: 1;
 }
 
 .arriba {
@@ -176,20 +156,15 @@ h4 {
     box-shadow: 0 0 3px 0 rgba(255, 255, 255, 0.2);
 }
 .arriba2 {
-    margin-top: 1em;
     flex: 1;
     padding: 1em;
     border-radius: 1em;
     box-shadow: 0 0 3px 0 rgba(255, 255, 255, 0.2);
 }
-
-
 .arriba p {
     text-transform: none;
     font-family: "Anonymous Pro", monospace;
     font-weight: 400;
-    font-style: normal;
-    margin-top: 1em;
     font-size: 1.25em;
 }
 .abajo {
@@ -199,97 +174,55 @@ h4 {
     padding: 1em;
 }
 
-ul {
-    list-style-type: none;
-    padding-inline-start: 0;
-}
-
-
 
 
 .col2 {
     padding: 1em;
-    flex: 1;
     background-color: #6808A4;
     border-radius: 1em;
 }
 
-.col3 {
-    flex: 1;
-}
-
-
+/* Rows */
 .boxes-abajo {
     display: flex;
     gap: 1em;
 }
 
-.box-row {
+#habilidades {
     flex: 1;
     padding: 1em;
     border-radius: 1em;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     background-color:#ffff;
     color: #000000;
 }
-
-.box-habilidades {
+#habilidades section {
+    flex: 1;
+    align-content: center;
+}
+#habilidades article {
+    margin: 1.1em;
+    gap: 1em;
     display: flex;
-    flex-flow: column wrap;
-    height: 30em;
-    gap: 1em;
-
 }
-
-.row1 {
-    flex-grow: 3;
-    padding: 1em;
-    margin: 1em;
-    gap: 1em;
-    flex-flow: row;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-
-
-}
-
-
-.row2 {
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
-    flex: 0;
-    background-color: #6808A4;
-    padding: 1em;
-    gap: 1em;
-    color: #ffff;
-}
-
-.row1 p {
+#habilidades p {
     margin: 1.5em 0 0 0;
     font-weight: 700;
 }
-
-.row2 p {
+#contacto {
+    flex: 0;
+    background-color: #6808A4;
+    padding: 1em;
+    border-radius: 1em;
+    gap: 1em;
+    color: #ffff;
+}
+#contacto p {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
-    font-style: normal;
-    margin: 1em 0 0 0;
     font-size: 1em;
     text-transform: uppercase;
-
-}
-
-a {
-    text-decoration: none;
-    color:#ffff;
-}
-
-.logo {
-    object-fit: contain;
-
 }
 
 .footer {
