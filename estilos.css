@@ -603,7 +603,10 @@ textarea {
     * {
         font-size: 10px;
     }
-
+    body {
+    align-items: center;
+    margin: 1em;
+    }
     header {
         flex-flow: column wrap;
     }
