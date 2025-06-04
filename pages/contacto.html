@@ -16,7 +16,7 @@
 
 <body>
     <nav class="displaydown cat-contacto">
-        <ul> 
+        <ul>
             <li><a href="../index.html" class="cv-display">Curr&iacute;culum</a></li>
             <li><a href="../pages/portafolio.html" class="portafolio-display">Portafolio</a></li>
             <li><a href="../pages/habilidades.html" class="habilidades-display">Habilidades</a></li>
@@ -44,13 +44,36 @@
                 </section>
                 <section>
                     <p>En qu&eacute; est&aacute;s interesadx?</p>
-                    <label>Diseño web <input type="checkbox" name="intereses" value="diseñoweb" id="web"></label>
-                    <label>Diseño Editorial <input type="checkbox" name="intereses" value="diseñoeditorial"
-                            id="editorial"></label>
-                    <label>Ilustraci&oacute;n <input type="checkbox" name="intereses" value="ilustraciones"
-                            id="ilustraciones"></label>
-                    <label>Diseño de identidad <input type="checkbox" name="intereses" value="identidad"
-                            id="identidad"></label>
+                    <label class="switch">Diseño web
+                        <input type="checkbox" name="intereses" value="diseñoweb" id="web">
+                        <div class="rail">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="indicator"></div>
+                    </label>
+                    <label class="switch">Diseño Editorial
+                        <input type="checkbox" name="intereses" value="diseñoeditorial" id="editorial">
+                        <div class="rail">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="indicator"></div>
+                    </label>
+                    <label class="switch">Ilustraci&oacute;n 
+                        <input type="checkbox" name="intereses" value="ilustraciones"
+                            id="ilustraciones">
+                        <div class="rail">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="indicator"></div>    
+                        </label>
+                    <label class="switch">Diseño de identidad 
+                        <input type="checkbox" name="intereses" value="identidad"
+                            id="identidad">
+                        <div class="rail">
+                            <div class="circle"></div>
+                        </div>
+                        <div class="indicator"></div>
+                        </label>
                     <label for="mensaje" class="label-mensaje">Mensaje</label>
                     <textarea name="mensaje" id="mensaje" maxlength="600"
                         placeholder="Dejame un mensaje con alguna otra especificaci&oacute;n si lo precis&aacute;s"></textarea>
@@ -74,8 +97,8 @@
         </section>
         <div>
             <p>P&aacute;gina diseñada por Faba Alejandro Guillermo - Copyright © 2025 </p>
-            <a href="#volverarriba"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"
-                    fill="none" alt="Flecha para realizar la acción de scroll to">
+            <a href="#volverarriba"><svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"
+                    viewBox="0 0 100 100" fill="none" alt="Flecha para realizar la acción de scroll to">
                     <path
                         d="M64.1269 36.98C64.9745 37.82 66.315 37.82 67.1626 36.98C67.5766 36.56 67.7737 36 67.7737 35.44C67.7737 34.88 67.5766 34.32 67.1429 33.9L50.5844 17.32C49.993 16.74 49.0468 16.74 48.4554 17.34L32.7446 33.26C31.9561 34.08 31.9561 35.4 32.7446 36.22C33.1585 36.64 33.671 36.84 34.2033 36.84C34.7355 36.84 35.2481 36.64 35.662 36.22L46.8784 25.28L46.8784 100L21.469 100C9.9963 100 0.691991 90.56 0.691992 78.92L0.691994 21.1C0.691995 9.46 9.99631 -3.9585e-06 21.469 -3.4497e-06L78.4579 -9.2231e-07C89.9503 -4.12636e-07 99.2546 9.46 99.2546 21.1L99.2546 78.92C99.2546 90.56 89.9503 100 78.4579 100L51.7474 100L51.7474 25.28L64.1269 36.98Z"
                         fill="currentColor" />
