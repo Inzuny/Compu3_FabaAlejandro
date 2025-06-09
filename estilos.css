@@ -136,13 +136,63 @@ header p {
     font-family: "IBM Plex Mono", monospace;
 }
 
-header img {
-    width: auto;
+.header-img-animada {
+    width: 300px;
+    background-image: url(img/index/header-character/monigote-header.svg);
+    background-repeat: no-repeat;
+    background-size: 90%;
     height: 300px;
+    animation: parpadeo 8s infinite alternate linear;
+    animation-delay: 8s;
+
 }
 
+@keyframes parpadeo {
+    0% {
+        background-image: url(img/index/header-character/monigote-header.svg);
+    }
+    1% {
+        background-image: url(img/index/header-character/monigote-header-animation-static.svg);
+    }
+    2% {
+        background-image: url(img/index/header-character/monigote-header-animation-static2.svg);
+    }
+    3% {
+        background-image: url(img/index/header-character/monigote-header-animation-static.svg);
+    }
+    4% {
+        background-image: url(img/index/header-character/monigote-header.svg);
+    }
+    100% {
+        background-image: url(img/index/header-character/monigote-header.svg);
+    }
+
+}
+
+.header-img-animada:hover {
+    animation: sonrojado 6s linear;
+    animation-delay: 2s;
+    cursor: pointer;
+}
+
+@keyframes sonrojado {
+    0% {
+        background-image: url(img/index/header-character/monigote-header.svg);
+    }
+    5% {
+        background-image: url(img/index/header-character/monigote-header-animation-hover2.svg);
+    }
+    100% {
+        background-image: url(img/index/header-character/monigote-header-animation-hover2.svg);
+    }
+}
+
+
+
+
+
 .headerfondo-oscuro {
-    background-image: url(img/svgs/fondo-header.svg);
+    background-image: url(img/generales/fondo-header.svg);
     background-repeat: repeat;
     background-size: auto;
     height: 62em;
@@ -182,8 +232,9 @@ header img {
     font-weight: 700;
 }
 
-/* SLIDER  */
-
+/*////////////////////////// 
+/////   Sliders
+//////////////////////////*/
 
 .slider-header {
     width: 100%;
@@ -203,15 +254,30 @@ header img {
     height: auto;
     overflow: hidden;
     scroll-snap-type: x mandatory;
-    scroll-behavior:smooth;
- }
+    scroll-behavior: smooth;
+}
 
 .slider ul {
     display: flex;
     padding: 0;
     width: 300%;
     animation: slide 10s infinite alternate ease-in-out;
+    animation-iteration-count:2;
 }
+
+@keyframes slide {
+    0% { margin-left: 0; }
+    23% { margin-left: 0; }
+
+    33% { margin-left: -100%; }
+    66% { margin-left: -100%; }
+
+    76% { margin-left: -200%; }
+    100% { margin-left: -200%; }
+    
+} 
+
+
 .slider li {
     width: 100%;
     position: relative;
@@ -224,11 +290,12 @@ header img {
     gap: 2em;
     align-items: end;
     position: absolute;
-    bottom:33%;
+    bottom: 33%;
     right: 15em;
     color: var(--color-blanco);
     z-index: 3;
 }
+
 .slider-textbox h1 {
     text-align: end;
     font-size: 4em;
@@ -250,14 +317,14 @@ header img {
     font-size: 1.5em;
     font-weight: 700;
     border-radius: 2em;
-    border:none;    
+    border: none;
     transition: all 0.3s ease;
 }
 
 .slider .slider-textbox button:hover {
     background-color: var(--color-negro);
     color: var(--color-blanco);
-    width: 100%;  
+    width: 100%;
 }
 
 .slider img {
@@ -265,6 +332,7 @@ header img {
     height: auto;
     filter: brightness(25%);
 }
+
 .slider-navarrows {
     position: absolute;
     top: 0;
@@ -277,6 +345,7 @@ header img {
     padding: 3em;
     z-index: 2;
 }
+
 .slider-navarrows svg {
     color: var(--color-negro);
     height: 50px;
@@ -291,7 +360,7 @@ header img {
 
 .slider-nav-indicator {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-evenly;
     position: absolute;
     z-index: 4;
@@ -301,40 +370,29 @@ header img {
     transform: translateX(-50%);
 }
 
-.slider-nav-indicator a, .slider-nav-indicator p{
+.slider-nav-indicator a,
+.slider-nav-indicator p {
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     width: 24px;
     height: 24px;
     border-radius: 1em;
     background-color: var(--color-blanco);
-    transition: all .1s linear;
+
 }
 
-.slider-nav-indicator p{
-    background-color:var(--color-rosa) ;
+.slider-nav-indicator p {
+    background-color: var(--color-rosa);
     width: 48px;
 }
+
 .slider-nav-indicator a {
     opacity: 50%;
 }
+
 .slider-nav-indicator a:hover {
     opacity: 100%;
 }
-
-/* 
-@keyframes slide {
-    0% { margin-left: 0; }
-    23% { margin-left: 0; }
-
-    33% { margin-left: -100%; }
-    66% { margin-left: -100%; }
-
-    76% { margin-left: -200%; }
-    100% { margin-left: -200%; }
-    
-}  */
-
 
 
 /*////////////////////////// 
@@ -446,7 +504,7 @@ main article {
     border-radius: 1em;
     gap: 2em;
 }
-
+/* habilidades.html */
 .info-article {
     display: flex;
     flex-flow: row wrap;
@@ -505,7 +563,7 @@ main article {
     background-color: var(--color-negro);
     color: var(--color-blanco);
 }
-
+/* index.html */
 .boxes-arriba {
     display: flex;
     gap: 2em;
@@ -519,6 +577,7 @@ main article {
 #trabajos {
     background-color: var(--color-blanco);
 }
+
 #trabajos ul {
     display: flex;
     flex-direction: column;
@@ -541,7 +600,8 @@ main article {
     text-transform: uppercase;
 }
 
-.arriba, .abajo {
+.arriba,
+.abajo {
     flex: 1;
 }
 
@@ -589,14 +649,14 @@ main article {
     background: var(--color-azul);
 }
 
-
+/* portafolio.html */
 .categorias {
     margin-top: 3em;
     width: 1100px;
     display: flex;
     flex-wrap: wrap;
     gap: 2em;
-    justify-content: space-between ;
+    justify-content: space-between;
 }
 
 .categoria {
@@ -607,10 +667,12 @@ main article {
     position: relative;
     overflow: hidden;
 }
+
 .categoria img {
     border-radius: 1em;
     filter: brightness(75%);
 }
+
 .categoria h3 {
     position: absolute;
     left: 0;
@@ -621,11 +683,12 @@ main article {
     font-weight: 700;
     border-radius: 0 1em 0 0;
 }
+
 .categoria:has(a:hover) h3 {
-    padding: 1em 0 9em .8em;
-    background-color:transparent;
-    transition: all 0.3s ease;
-} 
+    transform: translateY(-9em);
+    transition: all .3s ease;
+}
+
 .categoria a:hover::after {
     transform: translateY(0);
 }
@@ -636,7 +699,7 @@ main article {
     padding: 10px;
     color: var(--color-negro);
     position: absolute;
-    text-align:start;
+    text-align: start;
     inset: 0;
     display: grid;
     place-items: center;
@@ -644,54 +707,56 @@ main article {
     transform: translateY(100%);
     transition: transform .3s linear;
 }
-.categoria a:hover {
-    transform: translateY(0);
-}
 
-
-.afiches h3{
+.afiches h3 {
     background-color: var(--color-verde);
 }
+
 .afiches a::after {
     content: "Afiches realizados durante las cursadas de Diseño, Tipografía y proyectos personales.";
     background-color: var(--color-verde);
 }
 
-.editorial h3{
+.editorial h3 {
     background-color: var(--color-rosa);
 }
+
 .editorial a::after {
     content: "Libros, folletos y marcapaginas realizados en diferentes cursadas.";
     background-color: var(--color-rosa);
 }
 
-.fotografia h3{
+.fotografia h3 {
     background-color: var(--color-azul);
 }
+
 .fotografia a::after {
     content: "Fotografías realizadas con fines académicos y sin fines académicos";
     background-color: var(--color-azul);
 }
 
-.ilustracion h3{
+.ilustracion h3 {
     background-color: var(--color-naranja);
 }
+
 .ilustracion a::after {
     content: "Trabajos de ilustración y dibujos personales.";
     background-color: var(--color-naranja);
 }
 
-.variado h3{
+.variado h3 {
     background-color: var(--color-amarillo);
 }
+
 .variado a::after {
     content: "Trabajos sin una categoria especifica";
     background-color: var(--color-amarillo);
 }
 
-.identidad h3{
+.identidad h3 {
     background-color: var(--color-violeta);
 }
+
 .identidad a::after {
     content: "Creación de lenguaje visual e identidad gráfica";
     background-color: var(--color-violeta);
@@ -714,7 +779,7 @@ footer {
     gap: 6em;
     width: 100%;
     align-items: center;
-    background: url(img/svgs/footer-top-tileimage.svg);
+    background: url(img/generales/footer-top-tileimage.svg);
     background-repeat: repeat-x;
     background-size: 100px 80px;
     background-color: var(--color-blanco);
@@ -873,19 +938,22 @@ textarea {
     height: 2em;
     display: flex;
     align-items: center;
-    cursor:pointer;
+    cursor: pointer;
 }
+
 .switch input {
     display: none;
 }
+
 .rail {
     margin: 0 2em;
     position: relative;
     width: 3em;
     height: 1.2em;
-    background-color:#404040;
+    background-color: #404040;
     border-radius: 3px;
 }
+
 .circle {
     display: block;
     width: 1em;
@@ -898,6 +966,7 @@ textarea {
     left: 0;
     transition: transform 0.3s ease-in-out;
 }
+
 .indicator {
     width: 1em;
     height: 1em;
@@ -906,11 +975,11 @@ textarea {
     transition: all 0.3s ease-in-out;
 }
 
-.switch input:checked ~ .rail .circle {
+.switch input:checked~.rail .circle {
     transform: translate(2em, -50%);
 }
 
-.switch input:checked ~ .indicator {
+.switch input:checked~.indicator {
     background-color: var(--color-azul);
 }
 
@@ -924,19 +993,20 @@ textarea {
         font-size: 10px;
     }
 
-
-
     header {
         flex-flow: column wrap;
     }
 
-    header img {
-        width: auto;
-        height: 300px;
-    }
-
     header section {
         align-items: center;
+    }
+
+    header h1 {
+        font-size: 4em;
+    }
+
+    header p {
+        font-size: 3em;
     }
 
     nav {
@@ -952,7 +1022,8 @@ textarea {
         height: auto;
         flex-flow: column;
         align-items: start;
-        width: 300px;
+        width: 80vw;
+        margin: 0 auto;
         gap: 2em;
     }
 
@@ -963,13 +1034,14 @@ textarea {
 
     .displayup a:hover {
         transform: translateX(100px);
-        border-radius: 0px 20px 20px 0;
-        padding: 2em 5em 2em 2em;
+        border-radius: 0px 15px 15px 0;
+        padding: 1.5em 4em 1.5em 1.5em;
 
     }
 
     main {
-        width: 300px;
+        width: 80vw;
+        margin: 0 auto;
     }
 
     .boxes-arriba {
@@ -985,11 +1057,16 @@ textarea {
         gap: 2em;
     }
 
+    footer {
+        padding-top: 15em;        
+    }
+
     footer section {
-        width: 300px;
+        width: 80vw;
+        margin: 0 auto;
         flex-direction: row;
         gap: 70px;
-        justify-content: start;
+        justify-content: space-between;
         align-items: end;
     }
 
@@ -1001,8 +1078,13 @@ textarea {
     }
 
     footer div {
-        width: 300px;
-        flex-wrap: nowrap;
+        width: 80vw;
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: start;
+    }
+    footer div a {
+        margin-top: 2.5em;
     }
 
 }
