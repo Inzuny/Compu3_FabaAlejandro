@@ -151,18 +151,23 @@ header p {
     0% {
         background-image: url(img/index/header-character/monigote-header.svg);
     }
+
     1% {
         background-image: url(img/index/header-character/monigote-header-animation-static.svg);
     }
+
     2% {
         background-image: url(img/index/header-character/monigote-header-animation-static2.svg);
     }
+
     3% {
         background-image: url(img/index/header-character/monigote-header-animation-static.svg);
     }
+
     4% {
         background-image: url(img/index/header-character/monigote-header.svg);
     }
+
     100% {
         background-image: url(img/index/header-character/monigote-header.svg);
     }
@@ -179,17 +184,15 @@ header p {
     0% {
         background-image: url(img/index/header-character/monigote-header.svg);
     }
+
     5% {
         background-image: url(img/index/header-character/monigote-header-animation-hover2.svg);
     }
+
     100% {
         background-image: url(img/index/header-character/monigote-header-animation-hover2.svg);
     }
 }
-
-
-
-
 
 .headerfondo-oscuro {
     background-image: url(img/generales/fondo-header.svg);
@@ -262,20 +265,35 @@ header p {
     padding: 0;
     width: 300%;
     animation: slide 10s infinite alternate ease-in-out;
-    animation-iteration-count:2;
+    animation-iteration-count: 2;
 }
 
 @keyframes slide {
-    0% { margin-left: 0; }
-    23% { margin-left: 0; }
+    0% {
+        margin-left: 0;
+    }
 
-    33% { margin-left: -100%; }
-    66% { margin-left: -100%; }
+    23% {
+        margin-left: 0;
+    }
 
-    76% { margin-left: -200%; }
-    100% { margin-left: -200%; }
-    
-} 
+    33% {
+        margin-left: -100%;
+    }
+
+    66% {
+        margin-left: -100%;
+    }
+
+    76% {
+        margin-left: -200%;
+    }
+
+    100% {
+        margin-left: -200%;
+    }
+
+}
 
 
 .slider li {
@@ -504,6 +522,7 @@ main article {
     border-radius: 1em;
     gap: 2em;
 }
+
 /* habilidades.html */
 .info-article {
     display: flex;
@@ -563,6 +582,7 @@ main article {
     background-color: var(--color-negro);
     color: var(--color-blanco);
 }
+
 /* index.html */
 .boxes-arriba {
     display: flex;
@@ -590,6 +610,10 @@ main article {
     flex: 1;
     gap: 2em;
     border-radius: 1em;
+}
+
+.box-col h2 {
+    text-transform: none;
 }
 
 .col2 {
@@ -744,11 +768,11 @@ main article {
     background-color: var(--color-naranja);
 }
 
-.variado h3 {
+.grafica h3 {
     background-color: var(--color-amarillo);
 }
 
-.variado a::after {
+.grafica a::after {
     content: "Trabajos sin una categoria especifica";
     background-color: var(--color-amarillo);
 }
@@ -1044,6 +1068,11 @@ textarea {
         margin: 0 auto;
     }
 
+    main a {
+        font-size: 1.2em;
+    }
+
+
     .boxes-arriba {
         flex-direction: column;
     }
@@ -1058,7 +1087,7 @@ textarea {
     }
 
     footer {
-        padding-top: 15em;        
+        padding-top: 15em;
     }
 
     footer section {
@@ -1083,6 +1112,7 @@ textarea {
         flex-direction: column;
         align-items: start;
     }
+
     footer div a {
         margin-top: 2.5em;
     }
