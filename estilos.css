@@ -63,6 +63,19 @@ ol {
     padding: 0;
 }
 
+button {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 2em;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    border-radius: 1em;
+    border: none;
+    transition: all 0.3s ease;
+}
+
 main h1 {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 700;
@@ -83,14 +96,17 @@ main h3 {
     text-transform: capitalize;
 }
 
-main p {
-    font-size: 1.3em;
+main p{
+    font-size: 1.4em;
     font-weight: 400;
+}
+main input, main label, main textarea {
+    font-size: 1.1em;
 }
 
 main a {
     color: var(--color-negro);
-    font-size: 1.3em;
+    font-size: 1.4em;
     font-weight: 700;
 }
 
@@ -120,7 +136,7 @@ header {
 header section {
     display: flex;
     flex-flow: column wrap;
-    gap: 20px;
+    gap: 1em;
 }
 
 header h1 {
@@ -186,7 +202,7 @@ header p {
     }
 
     5% {
-        background-image: url(img/index/header-character/monigote-header-animation-hover2.svg);
+        background-image: url(img/index/header-character/monigote-header-animation-hover1.svg);
     }
 
     100% {
@@ -205,7 +221,7 @@ header p {
 
 .headerfondo-oscuro section {
     display: flex;
-    width: 92em;
+    width: 65vw;
     height: auto;
     padding: 6.25em 8.3em;
     flex-direction: column;
@@ -302,7 +318,7 @@ header p {
 }
 
 .slider .slider-textbox {
-    width: 500px;
+    width: 33%;
     display: flex;
     flex-direction: column;
     gap: 2em;
@@ -325,18 +341,9 @@ header p {
     font-weight: 700;
 }
 
+
 .slider .slider-textbox button {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    padding: 1em 2em;
-    font-family: "IBM Plex Mono", monospace;
     font-size: 1.5em;
-    font-weight: 700;
-    border-radius: 2em;
-    border: none;
-    transition: all 0.3s ease;
 }
 
 .slider .slider-textbox button:hover {
@@ -427,15 +434,15 @@ nav {
     justify-content: center;
     padding: 3em 0;
     box-sizing: content-box;
-    top: 0px;
+    top: 0;
 }
 
 nav ul {
-    width: 1100px;
+    width: 65vw;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    padding-inline-start: 0px;
+    padding-inline-start: 0;
 }
 
 nav a {
@@ -447,7 +454,7 @@ nav a {
     justify-content: center;
     align-items: center;
     position: relative;
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
 }
 
 .displayup a:hover {
@@ -509,7 +516,7 @@ nav a {
 main {
     display: flex;
     flex-flow: column wrap;
-    width: 1100px;
+    width: 65vw;
     gap: 2em;
     margin: 4em 0 8em 0;
 }
@@ -536,11 +543,27 @@ main article {
 .info-article h1 {
     text-transform: none;
 }
+.fondoblanco {
+    background-color: var(--color-blanco);
+}
+
+.fondonegro {
+    background-color: var(--color-negro);
+    color: var(--color-blanco);
+}
 
 .info-section {
     display: flex;
     flex-flow: column wrap;
     gap: 2em;
+}
+.info-section ul {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1em;
+}
+.info-section li{
+    font-size: 1.3em;
 }
 
 .info-img {
@@ -564,24 +587,156 @@ main article {
     border-radius: 1em;
 }
 
-.info-img .fotogrid .img-c {
+.info-img .fotogrid .img-1x2 {
     grid-row: 1/3;
     grid-column: 2;
 }
 
-.info-img .fotogrid .img-f {
+.info-img .fotogrid .img-2x1 {
     grid-column: 1/3;
 }
 
-
-.fondoblanco {
-    background-color: var(--color-blanco);
+.fotogrid a {
+    transition: all .15s linear;
 }
 
-.fondonegro {
+.fotogrid a:hover {
+    transform: scale(1.03);
+}
+
+/* Galeria oculta */
+
+#galeria {
+    display: none;
+    width: 99vw;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000000aa;
+    position: absolute;
+    left: 0;
+    z-index: 30;
+}
+
+#galeria-oculta {
+    display: flex;
+    width: 100%;
+    max-width: 85vw;
+    overflow: hidden;
+    z-index: 31;
+}
+
+#galeria-oculta li {
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    min-width: 85vw;
+    height: 100vh;
+    justify-content: space-between;
+}
+
+#galeria-oculta a {
+    padding: 1em;
+    transition: all .15s linear;
+}
+
+
+.galery-close {
+    position: absolute;
+    top: 4%;
+    left: 4%;
+    transition: all .15s linear;
+}
+
+.galery-close:hover,
+#galeria-oculta a:hover {
+    color: var(--color-rosa);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.galery-close:hover {
+    transform: rotate(90deg);
+}
+
+
+#foto-explab-1 {
+    background-image: url(img/habilidades/experencia-laboral/imagen-abierta/img-experiencia-stickers.jpg);
+}
+
+#foto-explab-2 {
+    background-image: url(img/habilidades/experencia-laboral/imagen-abierta/img-experiencia-impresion-camperas.jpg);
+}
+
+#foto-explab-3 {
+    background-image: url(img/habilidades/experencia-laboral/imagen-abierta/img-experiencia-credenciales.jpg);
+}
+
+#foto-explab-4 {
+    background-image: url(img/habilidades/experencia-laboral/imagen-abierta/img-experiencia-planchas-stickers.jpg);
+}
+
+#foto-explab-5 {
+    background-image: url(img/habilidades/experencia-laboral/imagen-abierta/img-experiencia-pack-stickers.jpg);
+}
+
+#foto-expacad-1 {
+    background-image: url(img/habilidades/experiencia-academica/imagen-abierta/eventokoi-afiche.png);
+}
+
+#foto-expacad-2 {
+    background-image: url(img/habilidades/experiencia-academica/imagen-abierta/eventokoi-folleto.png);
+}
+
+#foto-expacad-3 {
+    background-image: url(img/habilidades/experiencia-academica/imagen-abierta/eventofrutiger-afiche.png);
+}
+
+#foto-expacad-4 {
+    background-image: url(img/habilidades/experiencia-academica/imagen-abierta/eventokoi-remera-negra.jpg);
+}
+
+#foto-expacad-5 {
+    background-image: url(img/habilidades/experiencia-academica/imagen-abierta/montaje-packaging-corega.png);
+}
+
+#foto-expacad-6 {
+    background-image: url(img/habilidades/experiencia-academica/imagen-abierta/revista-mockup.jpg);
+}
+
+#foto-expacad-7 {
+    background-image: url(img/habilidades/experiencia-academica/imagen-abierta/eventofrutiger-folleto.jpg);
+}
+
+
+/* subcategorias */
+
+.presentacion {
+    flex-direction: row;
+    gap: 3em;
+}
+
+.presentacion section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.presentacion button {
+    font-size: 1em;
+    border: .1em solid var(--color-negro);
+}
+
+.presentacion button:hover {
+    border: none;
     background-color: var(--color-negro);
     color: var(--color-blanco);
 }
+
 
 /* index.html */
 .boxes-arriba {
@@ -631,14 +786,9 @@ main article {
 
 #habilidades {
     flex: 1;
-    padding: 20px;
-    border-radius: 20px;
-    display: flex;
     flex-flow: row wrap;
     background: var(--color-verde);
-    color: var(--color-negro);
-    justify-content: start;
-    gap: 150px;
+    justify-content: space-between;
 }
 
 #habilidades img {
@@ -649,9 +799,9 @@ main article {
 #habilidades section {
     margin: 0;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     gap: 2em;
+    width: 45%;
 }
 
 #habilidades ul {
@@ -659,12 +809,11 @@ main article {
     flex-grow: 1;
     flex-flow: column wrap;
     gap: 2em;
-    justify-content: center;
 }
 
 #habilidades li {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row;
     align-items: center;
     gap: 2em;
 }
@@ -674,18 +823,22 @@ main article {
 }
 
 /* portafolio.html */
-.categorias {
-    margin-top: 3em;
-    width: 1100px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2em;
-    justify-content: space-between;
+
+.categorias-container {
+    max-width: 65vw;
+    color: var(--color-blanco);
+    margin: 10em 0 20em;
 }
 
+.categorias {
+    margin-top: 3em;
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6em;
+} 
+
 .categoria {
-    width: 30%;
-    height: 200px;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -693,6 +846,7 @@ main article {
 }
 
 .categoria img {
+    width: 100%;
     border-radius: 1em;
     filter: brightness(75%);
 }
@@ -702,30 +856,25 @@ main article {
     left: 0;
     bottom: 0;
     padding: 1em;
-    width: 200px;
+    width: 100%;
     color: var(--color-negro);
     font-weight: 700;
     border-radius: 0 1em 0 0;
 }
 
-.categoria:has(a:hover) h3 {
-    transform: translateY(-9em);
-    transition: all .3s ease;
-}
 
 .categoria a:hover::after {
     transform: translateY(0);
 }
 
 .categoria a::after {
-    width: 180px;
-    font-size: .7em;
-    padding: 10px;
+    width: 100%;
+    font-size: 1em;
     color: var(--color-negro);
     position: absolute;
-    text-align: start;
     inset: 0;
     display: grid;
+    text-align: center;
     place-items: center;
     border-radius: 1em 0 0 0;
     transform: translateY(100%);
@@ -755,7 +904,7 @@ main article {
 }
 
 .fotografia a::after {
-    content: "Fotografías realizadas con fines académicos y sin fines académicos";
+    content: "Fotografías realizadas con fines académicos y sin fines académicos.";
     background-color: var(--color-azul);
 }
 
@@ -773,7 +922,7 @@ main article {
 }
 
 .grafica a::after {
-    content: "Trabajos sin una categoria especifica";
+    content: "Trabajos sin una categoria especifica.";
     background-color: var(--color-amarillo);
 }
 
@@ -782,7 +931,7 @@ main article {
 }
 
 .identidad a::after {
-    content: "Creación de lenguaje visual e identidad gráfica";
+    content: "Creación de lenguaje visual e identidad gráfica.";
     background-color: var(--color-violeta);
 }
 
@@ -879,7 +1028,7 @@ form {
     flex-flow: column wrap;
     gap: 2em;
     color: var(--color-blanco);
-    padding: 2em;
+    padding: 0 2em;
 }
 
 form section {
@@ -900,7 +1049,6 @@ label {
     display: block;
     height: 2em;
     margin: 0 0 1em 0;
-
 }
 
 input,
@@ -923,7 +1071,7 @@ textarea:hover {
 }
 
 form h1 {
-    padding: .5em 1em;
+    padding: 1em 0 0 1em;
     text-transform: none;
     height: auto;
 }
@@ -956,7 +1104,6 @@ textarea {
     margin-top: 20px;
 }
 
-
 .switch {
     margin: 1em 0;
     height: 2em;
@@ -972,16 +1119,16 @@ textarea {
 .rail {
     margin: 0 2em;
     position: relative;
-    width: 3em;
-    height: 1.2em;
+    width: 4em;
+    height: 2em;
     background-color: #404040;
-    border-radius: 3px;
+    border-radius: 4px;
 }
 
-.circle {
+.square {
     display: block;
-    width: 1em;
-    height: 1em;
+    width: 1.5em;
+    height: 2em;
     background-color: var(--color-blanco);
     border-radius: 3px;
     position: absolute;
@@ -992,15 +1139,15 @@ textarea {
 }
 
 .indicator {
-    width: 1em;
-    height: 1em;
+    width: 1.5em;
+    height: 1.9em;
     background-color: #404040;
     border-radius: 3px;
     transition: all 0.3s ease-in-out;
 }
 
-.switch input:checked~.rail .circle {
-    transform: translate(2em, -50%);
+.switch input:checked~.rail .square {
+    transform: translate(3em, -50%);
 }
 
 .switch input:checked~.indicator {
