@@ -35,7 +35,47 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--color-negro);
+
 }
+.splash {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+.rectangulo-animalcrossing {
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    background-color: var(--color-negro);
+    border-radius: 0 0 7em 7em;
+    animation: designmode 1s cubic-bezier(0, 0.91, 1, -0.17) forwards;
+    z-index: 20;
+
+}
+
+.rectangulo-animalcrossing:nth-child(1) { left: 0%; animation-delay: 0s;}
+.rectangulo-animalcrossing:nth-child(2) { left: 10%; animation-delay: 0.1s;}
+.rectangulo-animalcrossing:nth-child(3) { left: 20%; animation-delay: 0.2s;}
+.rectangulo-animalcrossing:nth-child(4) { left: 30%; animation-delay: 0.3s;}
+.rectangulo-animalcrossing:nth-child(5) { left: 40%; animation-delay: 0.4s;}
+.rectangulo-animalcrossing:nth-child(6) { left: 50%; animation-delay: 0.5s;}
+.rectangulo-animalcrossing:nth-child(7) { left: 60%; animation-delay: 0.6s;}
+.rectangulo-animalcrossing:nth-child(8) { left: 70%; animation-delay: 0.7s;}
+.rectangulo-animalcrossing:nth-child(9) { left: 80%; animation-delay: 0.8s;}
+.rectangulo-animalcrossing:nth-child(10) { left: 90%; animation-delay: 0.9s;}
+
+
+@keyframes designmode {
+    to {
+        transform: translateY(-120%);
+    }
+}
+
+
 
 main h2,
 main h3,
@@ -48,8 +88,8 @@ main label,
 main input,
 main textarea {
     font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
+    font-optical-sizing:auto;
+    font-style:normal;
 }
 
 a {
@@ -100,6 +140,7 @@ main h3 {
 main p{
     font-size: 1.4em;
     font-weight: 400;
+    line-height: 1.5em;
 }
 main input, main label, main textarea {
     font-size: 1.1em;
@@ -214,7 +255,7 @@ header p {
 .headerfondo-oscuro {
     background-image: url(img/generales/fondo-header.svg);
     background-repeat: repeat;
-    background-size: auto;
+    background-size: 100%;
     height: 62em;
     width: 100%;
 
@@ -240,6 +281,18 @@ header p {
     background-color: var(--color-azul);
 }
 
+.header-color-grafica {
+    background-color: var(--color-amarillo);
+}
+.header-color-identidad {
+    background-color: var(--color-violeta);
+}
+.header-color-ilustraciones {
+    background-color: var(--color-naranja);
+}
+.header-color-editorial {
+    background-color: var(--color-rosa);
+}
 
 .headerfondo-oscuro h1 {
     font-size: 5em;
@@ -343,14 +396,23 @@ header p {
 }
 
 
-.slider .slider-textbox button {
+.slider .slider-textbox a {
     font-size: 1.5em;
+    width: 100%;
+    color: var(--color-negro);
+    background-color: var(--color-blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 2em;
+    font-weight: 700;
+    border-radius: 1em;
+    transition: all 0.3s ease;
 }
 
-.slider .slider-textbox button:hover {
+.slider .slider-textbox a:hover {
     background-color: var(--color-negro);
     color: var(--color-blanco);
-    width: 100%;
 }
 
 .slider img {
@@ -455,7 +517,7 @@ nav a {
     justify-content: center;
     align-items: center;
     position: relative;
-    transition: transform .3s ease;
+    transition: transform .5s linear(0 0%, 0.22 2.1%, 0.86 6.5%, 1.11 8.6%, 1.3 10.7%, 1.35 11.8%, 1.37 12.9%, 1.37 13.7%, 1.36 14.5%, 1.32 16.2%, 1.03 21.8%, 0.94 24%, 0.89 25.9%, 0.88 26.85%, 0.87 27.8%, 0.87 29.25%, 0.88 30.7%, 0.91 32.4%, 0.98 36.4%, 1.01 38.3%, 1.04 40.5%, 1.05 42.7%, 1.05 44.1%, 1.04 45.7%, 1 53.3%, 0.99 55.4%, 0.98 57.5%, 0.99 60.7%, 1 68.1%, 1.01 72.2%, 1 86.7%, 1 100%);
 }
 
 .displayup a:hover {
@@ -511,6 +573,18 @@ nav a {
 
 .cat-portafolio {
     border-bottom: .4em solid var(--color-rosa);
+}
+
+.cat-grafica {
+    border-bottom: .4em solid var(--color-amarillo);
+}
+
+.cat-identidad {
+    border-bottom: .4em solid var(--color-violeta);
+}
+
+.cat-ilustraciones {
+    border-bottom: .4em solid var(--color-naranja);
 }
 
 
@@ -628,6 +702,7 @@ main article {
     max-width: 85vw;
     overflow: hidden;
     z-index: 31;
+
 }
 
 #galeria-oculta li {
@@ -642,28 +717,34 @@ main article {
     justify-content: space-between;
 }
 
+#portafolio-galeria-oculta a,
 #galeria-oculta a {
+    color: var(--color-blanco);
+    opacity: 70%;
     padding: 1em;
-    transition: all .15s linear;
+    transition: all .3s linear;
 }
 
+.galery-close:hover,
+#galeria-oculta a:hover,
+#portafolio-galeria-oculta a:hover {
+    color: var(--color-rosa);
+    cursor: pointer;
+    transform: scale(1.1);
+    opacity: 100%;
+}
 
 .galery-close {
+    color: var(--color-blanco);
+    opacity: 70%;
     position: absolute;
     top: 4%;
     left: 4%;
     transition: all .15s linear;
 }
-
-.galery-close:hover,
-#galeria-oculta a:hover {
-    color: var(--color-rosa);
-    cursor: pointer;
-    transform: scale(1.1);
-}
-
 .galery-close:hover {
     transform: rotate(90deg);
+    opacity: 100%;
 }
 
 
@@ -729,6 +810,16 @@ main article {
     text-transform: none;
     font-weight: 700;
 }
+.presentacion ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+}
+
+.presentacion li {
+    font-size: 1.2em;
+}
+
 .presentacion div section {
     display: flex;
     flex-direction: column;
@@ -749,7 +840,6 @@ main article {
     padding: 2em;
     width: 100%;
     font-size: 1em;
-
     border-radius: 1em;
 }
 .presentacion summary>svg {
@@ -792,10 +882,11 @@ summary {
 
 details .detailed-img {
     display: flex;
-    flex-flow: row;
+    flex-flow: row wrap;
     height: auto;
     width: auto;
     justify-content: space-between;
+    margin: 3em 1em 1em 1em;
     gap: 3em;
 }
 details[open] .detailed-img {
@@ -805,18 +896,16 @@ details[open] .detailed-img {
 .detailed-img>section {
     display: flex;
     flex-flow: column;
-    justify-content: start;
+    justify-content: end;
     align-items: start;
     margin-bottom: 2em;
     gap: 2em;
+    width: 40%;
 }
 .detailed-img>section>h1 {
     text-transform: none;
 }
 
-.detailed-img {
-    margin: 3em 1em 1em 1em;
-}
 .detailed-grid {
     width: auto;
     height: auto;
@@ -825,29 +914,44 @@ details[open] .detailed-img {
     grid-template-columns: 120px 120px;
     grid-template-rows: 120px;
 }
-#protafolio-galeria-oculta {
+.detailed-grid-2colum{
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-gap: 1em;
+    grid-template-columns: 120px 120px;
+}
+#portafolio-galeria-oculta {
     display: flex;
     width: 100%;
-    max-width: 50vw;
+    max-width: 100%;
     overflow: hidden;
     z-index: 31;
 }
 
-#protafolio-galeria-oculta li {
+#portafolio-galeria-oculta li {
     display: flex;
     align-items: center;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
     width: 100%;
-    min-width: 50vw;
-    height: 100vh;
+    min-width: 100%;
+    min-height: 100vh;
     justify-content: space-between;
 }
 
-#protafolio-galeria-oculta a {
+#portafolio-galeria-oculta a {
     padding: 1em;
     transition: all .15s linear;
+}
+
+.detailed-img video {
+    width: 384px;
+    height: 216px;
+}
+details>h1 {
+    margin-top: 3em;
 }
 
 
@@ -856,11 +960,11 @@ details[open] .detailed-img {
     grid-column: 1/3;
 }
 
-.detailed-grid a {
+.detailed-grid a, .detailed-grid-2colum a {
     transition: all .15s linear;
 }
 
-.detailed-grid a:hover {
+.detailed-grid a:hover, .detailed-grid-2colum a:hover {
     transform: scale(1.03);
 }
 
@@ -883,53 +987,35 @@ details[open] .detailed-img {
     background-image: url(img/portafolio/afiches/frutiger/abierta/frutiger-folleto-3.jpg);
 }
 
-/*
-a
-a
-a
-a
-.info-img {
-    display: flex;
-    margin-right: 4em;
+
+#foto-koi-f1 {
+    background-image: url(img/portafolio/afiches/koi/abierta/koi-folleto-1.jpg);
+}
+#foto-koi-f2 {
+    background-image: url(img/portafolio/afiches/koi/abierta/koi-folleto-2.png);
+}
+#foto-koi-f3 {
+    background-image: url(img/portafolio/afiches/koi/abierta/koi-menu.jpg);
+}
+#foto-koi-a1 {
+    background-image: url(img/portafolio/afiches/koi/abierta/koi-abstracto-1.png);
+}
+#foto-koi-a2 {
+    background-image: url(img/portafolio/afiches/koi/abierta/koi-abstracto-2.png);
+}
+#foto-koi-v1 {
+    background-image: url(img/portafolio/afiches/koi/abierta/koi-volante-1.png);
+}
+#foto-koi-v2 {
+    background-image: url(img/portafolio/afiches/koi/abierta/koi-volante-2.png);
+}
+#foto-koi-m1 {
+    background-image: url(img/portafolio/afiches/koi/abierta/koi-remera-1.jpg);
+}
+#foto-koi-m2 {
+    background-image: url(img/portafolio/afiches/koi/abierta/koi-remera-2.jpg);
 }
 
-.info-img .fotogrid {
-    width: 30em;
-    display: grid;
-    grid-template-columns: 10em 10em 10em;
-    grid-template-rows: 10em 10em 10em;
-    grid-gap: 1em;
-}
-
-.info-img .fotogrid img,
-.info-img .fotogrid video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    border-radius: 1em;
-}
-
-.info-img .fotogrid .img-1x2 {
-    grid-row: 1/3;
-    grid-column: 2;
-}
-
-.info-img .fotogrid .img-2x1 {
-    grid-column: 1/3;
-}
-
-.fotogrid a {
-    transition: all .15s linear;
-}
-
-.fotogrid a:hover {
-    transform: scale(1.03);
-}
-
-
-a
-a
-*a/
 
 /* index.html */
 .boxes-arriba {
@@ -1015,7 +1101,20 @@ a
     background: var(--color-azul);
 }
 #contacto a{
-    font-size: 1.2em;
+font-size: 1.2em;
+}
+#trabajos a,#contacto a{
+    border: 1px solid var(--color-negro);
+    padding: .5em;
+    border-radius: .5em;
+}
+#trabajos a:hover{
+    color: var(--color-blanco);
+    background-color: var(--color-negro);
+}
+#contacto a:hover {
+    color: var(--color-azul);
+    background-color: var(--color-negro);
 }
 
 /* portafolio.html */
@@ -1051,7 +1150,7 @@ a
     position: absolute;
     left: 0;
     bottom: 0;
-    padding: 1em;
+    padding: 1em 1em 1em 2em; 
     width: 100%;
     color: var(--color-negro);
     font-weight: 700;
@@ -1070,13 +1169,14 @@ a
     position: absolute;
     inset: 0;
     display: grid;
-    text-align: center;
+    text-align: start;
+    box-sizing: border-box;
+    padding: 2em;
     place-items: center;
     border-radius: 1em 0 0 0;
     transform: translateY(100%);
-    transition: transform .3s linear;
+    transition: all .5s linear(0 0%, 0 1.8%, 0.01 3.6%, 0.03 6.35%, 0.07 9.1%, 0.13 11.4%, 0.19 13.4%, 0.27 15%, 0.34 16.1%, 0.54 18.35%, 0.66 20.6%, 0.72 22.4%, 0.77 24.6%, 0.81 27.3%, 0.85 30.4%, 0.88 35.1%, 0.92 40.6%, 0.94 47.2%, 0.96 55%, 0.98 64%, 0.99 74.4%, 1 86.4%, 1 100%)
 }
-
 .afiches h3 {
     background-color: var(--color-verde);
 }
@@ -1196,7 +1296,7 @@ footer div {
 footer div a {
     margin-top: 6.3em;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 1s linear(0 0%, 0.22 2.1%, 0.86 6.5%, 1.11 8.6%, 1.3 10.7%, 1.35 11.8%, 1.37 12.9%, 1.37 13.7%, 1.36 14.5%, 1.32 16.2%, 1.03 21.8%, 0.94 24%, 0.89 25.9%, 0.88 26.85%, 0.87 27.8%, 0.87 29.25%, 0.88 30.7%, 0.91 32.4%, 0.98 36.4%, 1.01 38.3%, 1.04 40.5%, 1.05 42.7%, 1.05 44.1%, 1.04 45.7%, 1 53.3%, 0.99 55.4%, 0.98 57.5%, 0.99 60.7%, 1 68.1%, 1.01 72.2%, 1 86.7%, 1 100%);
     padding: 2em;
     opacity: 1;
 
@@ -1204,7 +1304,7 @@ footer div a {
 
 footer div a:hover {
     cursor: pointer;
-    transform: translateY(-40px);
+    transform: translateY(-30px);
     background-color: var(--color-rosa);
     padding: 2em;
     border-radius: 20px 20px 0 0;
@@ -1230,6 +1330,7 @@ form section {
     height: auto;
     display: flex;
     flex-flow: column;
+    justify-content: space-between;
     padding: 0 2em;
     flex: 1;
 }
@@ -1261,6 +1362,13 @@ input:hover,
 textarea:hover {
     background-color: #404040;
     border: .1em solid var(--color-blanco);
+    color: var(--color-blanco);
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border: .3em solid var(--color-azul);
     color: var(--color-blanco);
 }
 
@@ -1329,7 +1437,7 @@ textarea {
     top: 50%;
     transform: translateY(-50%);
     left: 0;
-    transition: transform 0.3s ease-in-out;
+    transition: transform .3s cubic-bezier(0.21, 0.56, 0.67, 0.42);;
 }
 
 .indicator {
@@ -1337,7 +1445,7 @@ textarea {
     height: 1.9em;
     background-color: #404040;
     border-radius: 3px;
-    transition: all 0.3s ease-in-out;
+    transition: all .3s ease-in-out;
 }
 
 .switch input:checked~.rail .square {
